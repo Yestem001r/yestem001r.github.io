@@ -35,7 +35,7 @@ h3{font-size:21px;font-weight:700}
 .lead{color:var(--muted);font-size:18px;max-width:620px}
 .center{text-align:center}.center .lead{margin:0 auto}
 .ph-t{background:#FFF3C4;border-radius:4px;padding:0 4px}
-.white-card{background:var(--white);border-radius:var(--r);box-shadow:0 1px 2px rgba(20,22,31,.04),0 12px 40px -18px rgba(20,22,31,.12)}
+.white-card{background:var(--white);border-radius:var(--r);border:1px solid var(--line);box-shadow:0 1px 2px rgba(20,22,31,.04),0 10px 30px -18px rgba(20,22,31,.14)}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px Onest,sans-serif;padding:15px 28px;border-radius:100px;border:1.5px solid transparent;cursor:pointer;transition:.15s;white-space:nowrap}
@@ -312,7 +312,7 @@ footer .logo{color:var(--ink);margin-bottom:14px}
 .mcta{display:none}
 
 @media (max-width:960px){
-  section{padding:68px 0}
+  section{padding:60px 0}
   nav.menu,.top .btn{display:none}
   .burger{display:block}
   nav.menu.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:#fff;padding:20px;gap:16px;border-bottom:1px solid var(--line)}
@@ -337,38 +337,166 @@ footer .logo{color:var(--ink);margin-bottom:14px}
   .mcta .wa svg{width:26px;height:26px;fill:#fff}
 }
 @media (max-width:560px){
-  body{font-size:16px}
+  body{font-size:15px;line-height:1.5}
   .wrap{padding:0 16px}
+  section{padding:44px 0}
+  h2{font-size:27px;margin-bottom:10px;line-height:1.15}
+  h3{font-size:18px}
+  .lead{font-size:15px}
+  .btn{padding:13px 20px;font-size:15px}
+  .btn-note{font-size:13px;margin-top:10px}
+  :root{--r:18px}
+
+  /* hero */
+  .hero{padding:24px 0 36px}
+  .proof{font-size:13.5px;margin-bottom:14px}
+  .proof i{width:26px;height:26px}
+  .hero h1{font-size:36px;margin-bottom:8px}
+  .hero h1 .spark{width:24px;height:24px}
+  .h-sub{font-size:18px;margin-bottom:12px}
+  .hero .lead{margin-bottom:20px}
+  .cta-row{gap:8px}
   .cta-row .btn{width:100%}
-  .hero-visual{padding:0 0 0 16px}
+  .hero-proof{font-size:13px;margin-top:16px}
+  .hero-proof .mini img{width:32px;height:42px}
+  .hero-grid{gap:28px}
+  .hero-visual{padding:0 0 0 14px}
+  .hero-photo{border-radius:24px}
   .skills,.t2{display:none}
-  .bluecard{padding:14px 16px;border-radius:16px}
-  .bluecard .n{font-size:30px}
-  .bluecard .l{font-size:12px}
-  .bc1{width:124px;top:auto;bottom:24%}
-  .bc2{width:140px;bottom:5%}
-  .tick{font-size:13px}
-  .week,.opts{grid-template-columns:1fr}
-  .card,.price-main,.inc{padding:26px 22px}
-  .diag-l,.diag-r{padding:28px 22px}
-  .diag-l h3{font-size:24px}
-  .steps li{grid-template-columns:34px 1fr;column-gap:12px}
-  .steps li::before{width:34px;height:34px;font-size:15px}
-  .steps b{font-size:17px}
-  .steps span{font-size:15px}
-  .price-main .top-tag{left:22px}
-  .pill{padding:16px 20px;border-radius:22px}
-  .video{border-radius:20px}
-  .video .ph{font-size:11px;padding-bottom:14px}
-  .video .tag{left:12px;top:12px;font-size:12px;padding:6px 12px}
-  .play{width:58px;height:58px}
-  .play::after{border-left-width:16px;border-top-width:10px;border-bottom-width:10px;margin-left:4px}
-  .facts{gap:8px}.fact{padding:14px}.fact .n{font-size:22px}.fact .l{font-size:12px}
-  .about-vis .score-card{min-width:0;padding:14px 16px}
-  .score-card .big{font-size:32px;margin-bottom:8px}
-  .rev .ov{font-size:36px}
-  .rev .secs div{font-size:11px}
-  .hero-proof{font-size:14px}
+  .bluecard{padding:11px 13px;border-radius:14px}
+  .bluecard .n{font-size:26px}
+  .bluecard .l{font-size:11px;margin-top:4px}
+  .bc1{width:112px;top:auto;bottom:24%}
+  .bc2{width:124px;bottom:5%}
+  .tick{font-size:12px;padding:6px 11px 6px 7px}
+  .stats{grid-template-columns:repeat(4,1fr);gap:6px;margin-top:28px}
+  .stat .n{font-size:24px}
+  .stat .l{font-size:11px;line-height:1.25}
+
+  /* fit / pain */
+  .cards2{gap:12px;margin-top:22px}
+  .card{padding:20px 18px}
+  .ico{width:40px;height:40px;border-radius:11px;margin-bottom:12px}
+  .ico svg{width:20px;height:20px}
+  .card h3.blue-t,.card h3.pink-t{font-size:20px}
+  .list{gap:9px;margin-top:12px}
+  .list li{gap:10px;font-size:14.5px}
+  .list.yes li::before,.list.no li::before{width:20px;height:20px;font-size:11px}
+  .fit-note{font-size:13.5px;margin-top:14px}
+  .pain{padding:22px 18px;gap:16px;border-radius:20px}
+  .pain p.big{font-size:18px}
+  .pain .lead{margin-bottom:16px !important}
+
+  /* course */
+  .how{gap:0}
+  .orbit{display:none}
+  .pills{gap:8px;margin-top:18px}
+  .pill{padding:12px 16px;border-radius:16px;font-size:15px}
+  .pill small{font-size:13px}
+  .pill::after{font-size:17px}
+  .week{grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+  .day{padding:14px;border-radius:16px}
+  .day .d{font-size:12px}
+  .day .t{font-size:16px;margin:2px 0 4px}
+  .day p{font-size:12.5px;line-height:1.4}
+  .mid-cta{margin-top:24px;gap:10px}
+  .mid-cta span{font-size:13px}
+
+  /* about */
+  .about{gap:0}
+  .about-vis{margin-bottom:30px;max-width:340px}
+  .about-vis .main{border-radius:24px}
+  .about-vis .tagl{font-size:11.5px;padding:6px 11px;left:12px;top:12px}
+  .about-vis .score-card{min-width:0;padding:12px 14px;border-radius:16px}
+  .score-card .k{font-size:11px}
+  .score-card .big{font-size:26px;margin:2px 0 8px}
+  .score-card .secs div{padding:5px 8px;font-size:11px}
+  .score-card .secs b{font-size:14px}
+  .trf-card{width:40%}
+  .about p{font-size:15px;margin-bottom:10px}
+  .facts{display:none}
+
+  /* results */
+  .rev-track{gap:14px;margin-top:22px}
+  .rev{border-radius:20px}
+  .rev .shot{padding:12px 12px 0}
+  .rev .shot img{aspect-ratio:4/3}
+  .rev .body{padding:16px}
+  .rev .top{margin-bottom:10px}
+  .rev .ov{font-size:30px}
+  .rev .meta{font-size:12.5px}
+  .rev .secs div{font-size:10.5px;padding:6px 2px}
+  .rev .secs b{font-size:15px}
+
+  /* guarantee */
+  .guar{padding:22px 18px;gap:18px;border-radius:20px}
+  .guar .badge{font-size:12.5px;padding:6px 12px;margin-bottom:12px}
+  .guar h2{font-size:23px}
+  .guar .why{display:none}
+  .guar .cond{padding:16px;border-radius:16px}
+  .guar .cond h3{font-size:15.5px}
+  .guar .small{font-size:12.5px;margin-top:12px}
+  .guar .btn{width:100%}
+
+  /* price */
+  .price-grid{gap:14px;margin-top:22px}
+  .inc,.price-main{padding:20px 18px;border-radius:20px}
+  .panel-h{font-size:12.5px;margin-bottom:10px}
+  .panel-h span{width:22px;height:22px;font-size:11.5px}
+  .inc h3{font-size:19px}
+  .inc .list{gap:10px;margin-top:14px}
+  .inc .list li span small{font-size:12.5px}
+  .price-main{padding-top:26px}
+  .price-main .top-tag{left:18px;font-size:12px;padding:5px 12px}
+  .amount{font-size:38px}
+  .split{font-size:14px}
+  .rub{font-size:13px}
+  .prow{font-size:14px;padding:10px 0}
+  .prow:first-of-type{margin-top:16px}
+  .seats{padding:10px 12px;margin:16px 0;gap:10px}
+  .seat-bar i{width:11px;height:7px}
+  .seats div{font-size:12.5px}
+  .price-main .btn{padding:14px}
+  .banks span{font-size:11.5px;padding:4px 9px}
+  .anchor{font-size:13.5px;padding:14px 16px;margin-top:14px}
+
+  /* options */
+  .diag{margin-top:22px;border-radius:20px}
+  .diag-l,.diag-r{padding:20px 18px}
+  .diag-l h3{font-size:20px;margin-bottom:14px}
+  .steps{gap:14px}
+  .steps li{grid-template-columns:30px 1fr;column-gap:12px}
+  .steps li::before{width:30px;height:30px;font-size:14px;border-radius:9px}
+  .steps b{font-size:15.5px}
+  .steps span{font-size:13.5px}
+  .diag-res{font-size:13.5px;padding:12px 14px;margin-top:16px}
+  .diag-r .pr{font-size:34px}
+  .diag-r .credit{margin:14px 0;padding:12px;font-size:13.5px}
+  .opts{grid-template-columns:1fr;gap:10px;margin-top:10px}
+  .opt{padding:18px;border-radius:18px}
+  .opt .ico{display:none}
+  .opt h3{font-size:18px}
+  .opt .pr{font-size:17px;margin:4px 0 6px}
+  .opt p{font-size:13.5px;margin-bottom:12px}
+  .opt .btn{padding:10px 18px;font-size:14px}
+
+  /* faq + final */
+  .faq{gap:8px;margin-top:20px}
+  details{padding:0 16px;border-radius:14px}
+  summary{font-size:15px;padding:14px 0}
+  summary::after{font-size:20px}
+  details p{font-size:14px;padding-bottom:14px}
+  .final{padding-bottom:40px}
+  .final h2{font-size:24px}
+  .final .cta-row{margin-top:20px}
+  footer{padding:36px 0 96px;font-size:14px}
+
+  /* sticky bar */
+  .mcta{left:10px;right:10px;bottom:10px;gap:8px}
+  .mcta .btn{padding:13px;font-size:15px}
+  .mcta .wa{width:48px;height:48px}
+  .mcta .wa svg{width:22px;height:22px}
+  .video{border-radius:18px}
 }
 </style>
 </head>
@@ -586,8 +714,8 @@ footer .logo{color:var(--ink);margin-bottom:14px}
       <div>
         <span class="badge">Гарантия</span>
         <h2>Если сделаешь свою часть, <span class="blue"><b>я сделаю свою</b></span> — даже после курса</h2>
-        <p class="lead">Ты ходишь на созвоны, сдаёшь домашку и пробники в срок. Если на официальном IELTS в течение 30 дней после курса нет 7.0 — я бесплатно продолжаю: те же 2 созвона в неделю, проверка, пробники, до следующей попытки (до 8 недель).</p>
-        <p class="small">Почему так: результат зависит от нас обоих. Эти условия — ровно то, что приводит к 7.0.</p>
+        <p class="lead">Выполнил условия, но на IELTS в течение 30 дней после курса нет 7.0? Продолжаю заниматься с тобой бесплатно до следующей попытки — до 8 недель.</p>
+        <p class="small why">Почему так: результат зависит от нас обоих. Эти условия — ровно то, что приводит к 7.0.</p>
       </div>
       <div class="cond">
         <h3>Условия — одинаковые для всех</h3>
